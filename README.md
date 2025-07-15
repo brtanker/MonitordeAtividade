@@ -1,8 +1,8 @@
-## MonitordeAtividade
+# MonitordeAtividade
 
 Monitora o tempo de atividade do usuário. Caso a inatividade exceda o tempo limite definido, um alerta é enviado por e-mail para um ou mais usuários
 
-# Prinicipais funcionalidades
+## Prinicipais funcionalidades
 
 • Monitoramento de Inatividade: Detecta a ausência de movimentos do mouse, cliques ou uso do teclado.
 
@@ -19,7 +19,7 @@ Monitora o tempo de atividade do usuário. Caso a inatividade exceda o tempo lim
 
 • Ícone Personalizável: Permite a personalização tanto do ícone da bandeja do sistema quanto do ícone do arquivo executável (.exe).
 
-# Onde e por quê utilizar
+## Onde e por quê utilizar
 
 O monitor de atividades é ideal para ambientes onde se é necessário garantir que as estações de trabalho estejam sendo efetivamente utilizadas.
 
@@ -31,7 +31,7 @@ O monitor de atividades é ideal para ambientes onde se é necessário garantir 
 
 • Elimina a necessidade de supervisão manual, enviando alertas confiáveis e baseados em dados para os responsáveis.
 
-## Requires
+# Requires
 
 pynput: Listeners globais que detectam interações com o mouse e o teclado.
 
