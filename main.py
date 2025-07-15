@@ -2,7 +2,6 @@ import os
 import sys
 import json
 import socket
-import time
 import smtplib
 import threading
 from email.mime.text import MIMEText
@@ -41,9 +40,9 @@ class ConfigManager:
         """Retorna a configuração padrão, incluindo os campos ocultos do usuário."""
         return {
             "tempo_limite_minutos": 20,
-            "email_remetente": "intranetcometa@gmail.com",
-            "senha_remetente": "eauozipfpyjwhcjy",
-            "email_destinatario": ["carmina@lojascometa.com.br", "nilza@lojascometa.com.br"],
+            "email_remetente": "seu-email-remetente",
+            "senha_remetente": "sua-senha-de-app",
+            "email_destinatario": ["destinatario_01@gmail.com", "destinatario_02@gmail.com"],
             "servidor_smtp": "smtp.gmail.com",
             "porta_smtp": 587,
             "almoco_inicio": "13:00",
@@ -121,7 +120,6 @@ class SettingsWindow:
         self.window.mainloop()
 
     def save_and_close(self):
-        # *** CORREÇÃO APLICADA AQUI ***
         # Validação para garantir que o intervalo de almoço não exceda 2 horas.
         inicio_str = self.almoco_inicio_var.get()
         fim_str = self.almoco_fim_var.get()
@@ -322,7 +320,7 @@ class InactivityMonitor:
             icon_image = self.create_icon_image()
         menu = (
             pystray.MenuItem('Configurar Pausa', self.open_settings_window),
-            pystray.MenuItem('ㅤ', self.open_settings_window) #self.exit_app encerra o programa
+            pystray.MenuItem('Encerrar', self.exit_app) 
         )
         icon = pystray.Icon("monitor_inatividade", icon_image, "Monitor de Atividade", menu)
         return icon
